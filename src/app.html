@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<style>
+		@font-face {
+			font-family: 'Helvetica Now';
+			src: url('/HelveticaNowText-Regular/font.woff2') format('woff2'),
+				url('/HelveticaNowText-Regular/font.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Helvetica Now';
+			src: url('/HelveticaNowText-MdIt/font.woff2') format('woff2'),
+				url('/HelveticaNowText-MdIt/font.woff') format('woff');
+			font-weight: bold;
+			font-style: italic;
+			font-display: swap;
+		}
+	</style>
+		%svelte.head%
+	</head>
+	<body>
+		<div id="svelte">%svelte.body%</div>
+	</body>
+</html>
