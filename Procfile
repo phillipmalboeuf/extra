@@ -1,1 +1,1 @@
-web: npm run start
+web: /home/node/app/node_modules
