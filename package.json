@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "svelte-kit dev --open",
 		"build": "svelte-kit build",
-		"start": "svelte-kit start"
+		"start": "./node_modules/@sveltejs/kit/svelte-kit start"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
