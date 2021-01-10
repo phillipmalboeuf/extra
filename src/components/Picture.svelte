@@ -2,8 +2,6 @@
   export let media
   export let small = false
   export let webp = true
-
-  console.log(media)
 </script>
 
 <style>

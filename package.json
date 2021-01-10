@@ -1,6 +1,9 @@
 {
 	"name": "extra",
 	"version": "0.0.1",
+	"engines": {
+		"node": "14"
+	},
 	"scripts": {
 		"dev": "svelte-kit dev --open",
 		"build": "svelte-kit build",
