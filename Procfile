@@ -1,1 +1,1 @@
-web: ./node_modules/@sveltejs/kit/svelte-kit start
+web: /app/node_modules/@sveltejs/kit/svelte-kit start
