@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "svelte-kit dev --open",
 		"build": "svelte-kit build",
-		"start": "svelte-kit start"
+		"start": "svelte-kit start --port 5000"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",
