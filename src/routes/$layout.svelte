@@ -16,12 +16,13 @@
 	:global(:root) {
 		font-family: "Helvetica Now", "Helvetica Neue", Helvetica, sans-serif;
 
-    
     --yellow: yellow;
 
     --large: 1444px;
     --medium: 1024px;
     --small: 375px;
+
+    --top: 0px;
 
     --textcolor: black;
     --highlight: var(--yellow);
@@ -46,6 +47,7 @@
     min-height: 120vh;
     background: var(--background);
     padding: 2vw;
+    margin-top: var(--top);
 		/* margin: 0 auto; */
     /* max-width: var(--large); */
 	}

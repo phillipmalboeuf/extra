@@ -9,6 +9,15 @@ export const entries = async (fetch, type, locale='fr-CA') => {
   return response.json()
 }
 
+export const entry = async (fetch, type, id, locale='fr-CA') => {
+  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&sys.id=${id}&locale=${locale}&include=3`)
+  const json = await response.json()
+  return {
+    ...json,
+    item: json.items[0]
+  }
+}
+
 export function findEntry(content, id) {
   return content.includes.Entry.find(entry => entry.sys.id === id)
 }
