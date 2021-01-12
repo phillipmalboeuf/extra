@@ -11,6 +11,7 @@
 		font-style: italic;
 		font-size: 42px;
 		line-height: 1.33;
-		transform: rotate(-9deg);
+		margin-bottom: 6rem;
+		// transform: rotate(-9deg);
 	}
 </style>
