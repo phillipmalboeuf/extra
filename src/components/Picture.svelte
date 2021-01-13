@@ -1,7 +1,7 @@
 <script>
   export let media
   export let small = false
-  export let webp = true
+  export let webp = false
 </script>
 
 <style>
