@@ -1,14 +1,10 @@
 
 <script>
   export let intro
-
-	let height
 </script>
 
-{#if height}
-<div style="height: {height*0.75}px;"></div>
-{/if}
-<p bind:offsetHeight={height}>{intro.fields.text}</p>
+<div></div>
+<p>{intro.fields.text}</p>
 
 <style lang="scss">
 	p {
@@ -27,6 +23,7 @@
 		float: right;
 		shape-outside: polygon(0 0, 100% 0, 100% 100%);
 		width: 100%;
+		height: 20vw;
 		transform: rotate(-12deg);
 		transform-origin: top left;
 	}
