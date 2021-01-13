@@ -117,6 +117,9 @@
       font-style: italic;
       font-weight: bold;
       text-decoration: none;
+      display: inline-block;
+      transform: rotate(-12deg);
+      transform-origin: bottom left;
     }
 
     p {
