@@ -10,12 +10,12 @@
 		"start": "svelte-kit start --port 5000"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "next",
-		"@sveltejs/kit": "next",
-		"@sveltejs/snowpack-config": "next",
+		"@sveltejs/adapter-node": "1.0.0-next.0",
+		"@sveltejs/kit": "1.0.0-next.15",
+		"@sveltejs/snowpack-config": "1.0.0-next.0",
 		"svelte": "^3.29.0",
 		"sass": "^1.0.0",
-		"svelte-preprocess": "next"
+		"svelte-preprocess": "^4.0.0"
 	},
 	"dependencies": {
 		"axios": "^0.21.1",
