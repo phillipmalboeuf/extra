@@ -5,7 +5,6 @@
   import Introduction from '$components/Introduction.svelte'
 
 	export let photo
-  console.log(photo)
 </script>
 
 

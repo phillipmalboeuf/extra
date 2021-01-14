@@ -2,7 +2,7 @@
 	import { entries } from '$clients/contentful.svelte'
 
 	export async function load({ page, fetch }) {
-		const projects = await entries(fetch, 'projet')
+		const projects = await entries(fetch, 'projet', '-fields.date')
 
 		return { props: { projects } }
 	}
@@ -16,7 +16,13 @@
 
 <nav>
   <h1>Projets</h1>
-  <a href="/projets">Tous les projets</a>
+  <!-- <a href="/projets">Tous les projets</a> -->
 </nav>
 
 <Portfolio {projects} />
+
+<style lang="scss">
+	nav {
+		margin-bottom: 6rem;
+	}
+</style>

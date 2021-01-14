@@ -4,8 +4,8 @@ const contentful = {
   accessToken: 'j__74MmkL9qeR_oaiPoFVj5MmXsu0H8QbH6WI_I9S00'
 }
 
-export const entries = async (fetch, type, locale='fr-CA') => {
-  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&locale=${locale}&include=2`)
+export const entries = async (fetch, type, order='-sys.createdAt', locale='fr-CA') => {
+  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&locale=${locale}&order=${order}&include=2`)
   return response.json()
 }
 
