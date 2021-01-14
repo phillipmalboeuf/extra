@@ -3,7 +3,6 @@
   import Picture from '$components/Picture.svelte'
 
 	export let projects
-  console.log(projects)
   const items = projects.items.map(item => ({
     ...item,
     thumbnail: findAsset(projects, item.fields.thumbnail.sys.id)
@@ -16,8 +15,8 @@
     <figure class:horizontal={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height}>
       <figcaption>
         <a href="/projets/{project.fields.id}">
-          <h4>{project.fields.titre}</h4>
-          <p>{project.fields.introduction}</p>
+          <h5>{project.fields.titre}</h5>
+          <p>{project.fields.descripteur}</p>
         </a>
       </figcaption>
       <a href="/projets/{project.fields.id}">
@@ -31,6 +30,16 @@
 
 
 <style lang="scss">
+  h5, p {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p {
+    opacity: 0.3;
+  }
+
   ol {
     margin: 0;
     padding: 0;

@@ -4,7 +4,7 @@
 </script>
 
 <div></div>
-<p>{intro.fields.text}</p>
+<p>{intro}</p>
 
 <style lang="scss">
 	p {

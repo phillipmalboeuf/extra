@@ -54,21 +54,14 @@
 
   :global(h1, h2, h3) {
     font-weight: 500;
-    font-style: italic;
+    // font-style: italic;
     line-height: 1;
     margin: 0 auto 1rem;
   }
 
-  :global(h1) {
-    font-size: 150px;
-  }
-
-  :global(h2) {
-    font-size: 90px;
-  }
-
-  :global(h3) {
-    font-size: 82px;
+  :global(h1, h2, h3) {
+    font-size: 2rem;
+    font-weight: normal;
   }
 
   :global(h5, h6, p, small) {
@@ -76,32 +69,30 @@
   }
 
   :global(h5) {
-    font-size: 14px;
+    font-size: 2rem;
     font-weight: normal;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     line-height: 1.222;
   }
 
   :global(h6) {
-    font-size: 10px;
+    font-size: 1rem;
     font-weight: normal;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.6;
   }
 
   :global(p) {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.222;
     white-space: pre-line;
   }
 
   :global(small),
   :global(small p) {
     display: block;
-    font-size: 12px;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.222;
   }
 
   @media (max-width: 1200px) {
