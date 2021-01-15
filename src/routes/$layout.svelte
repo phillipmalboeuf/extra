@@ -56,7 +56,7 @@
     font-weight: 500;
     // font-style: italic;
     line-height: 1;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
   }
 
   :global(h1, h2, h3) {
@@ -65,7 +65,7 @@
   }
 
   :global(h5, h6, p, small) {
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
   }
 
   :global(h5) {
