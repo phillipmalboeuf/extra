@@ -20,9 +20,9 @@
 {#if visible}
 <footer class="visible" transition:fly={{ y: 100 }}>
   <nav>
-    <a href="/projets">Projets</a>
-    <a href="/a-propos">À propos</a>
-    <a href="/contact">Contact</a>
+    <a href="/projets" on:click={() => visible = false}>Projets</a>
+    <a href="/a-propos" on:click={() => visible = false}>À propos</a>
+    <a href="/contact" on:click={() => visible = false}>Contact</a>
     <a href="/en">English</a>
   </nav>
 </footer>
