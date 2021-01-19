@@ -1,6 +1,21 @@
+<script context="module">
+	export async function load({ page }) {
+		return { props: { locale: page.query.get('locale') } }
+	}
+</script>
+
 <script>
+  import { setContext } from 'svelte'
   import Navigation from '$components/Navigation.svelte'
-</script> 
+
+  export let locale
+  setContext('locale', locale)
+</script>
+
+<svelte:head>
+  <html lang={locale || "fr"} />
+	<title>Extra</title>
+</svelte:head>
 
 <main>
   <slot></slot>

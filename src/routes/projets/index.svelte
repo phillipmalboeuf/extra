@@ -2,7 +2,8 @@
 	import { entries } from '$clients/contentful.svelte'
 
 	export async function load({ page, fetch }) {
-		const projects = await entries(fetch, 'projet', '-fields.date')
+		const locale = page.query.get('locale')
+		const projects = await entries(fetch, 'projet', '-fields.date', locale ? { 'en': 'en-CA' }[locale] : undefined)
 
 		return { props: { projects } }
 	}

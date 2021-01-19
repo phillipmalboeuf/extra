@@ -1,10 +1,12 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount, getContext } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   
   let visible = false
   let scrolled
   let footer
+
+  let locale = getContext('locale')
 
   onMount(() => {
 		const scrolledObserver = new IntersectionObserver( 
@@ -20,19 +22,19 @@
 {#if visible}
 <footer class="visible" transition:fly={{ y: 100 }}>
   <nav>
-    <a href="/projets" on:click={() => visible = false}>Projets</a>
-    <a href="/a-propos" on:click={() => visible = false}>À propos</a>
-    <a href="/contact" on:click={() => visible = false}>Contact</a>
-    <a href="/en">English</a>
+    <a href="/projets{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a href="/contact{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
 {:else}
 <footer>
   <nav>
-    <a href="/projets">Projets</a>
-    <a href="/a-propos">À propos</a>
-    <a href="/contact">Contact</a>
-    <a href="/en">English</a>
+    <a href="/projets{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a href="/a-propos{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a href="/contact{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
 {/if}
