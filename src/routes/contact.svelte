@@ -54,7 +54,12 @@
 		margin: 6rem 0;
 		display: grid;
     grid-template-columns: 1fr 5fr;
-    column-gap: 2vw;
+    column-gap: var(--gutter);
+    row-gap: var(--gutter);
+
+    @media (max-height: 900px) {
+      grid-template-columns: 1fr;
+    }
 	}
 
   h1, ul {
@@ -68,13 +73,18 @@
     list-style: none;
 
     li {
-      margin-bottom: 2vw;
+      margin-bottom: var(--gutter);
       text-transform: capitalize;
+      word-break: break-all;
     }
 
     span {
       opacity: 0.3;
       text-transform: none;
+
+      @media (max-height: 900px) {
+        font-size: 1.333rem;
+      }
     }
   }
 </style>

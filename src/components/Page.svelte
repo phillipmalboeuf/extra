@@ -7,8 +7,6 @@
   const hero = page.item.fields.hero && findAsset(page, page.item.fields.hero.sys.id)
 </script>
 
-<!-- <h1>{page.item.fields.titre}</h1> -->
-
 <Hero {hero} />
 
 <Contenu page={page} />

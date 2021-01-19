@@ -23,12 +23,21 @@
 		margin: 6rem 0;
 		display: grid;
     grid-template-columns: 1fr 5fr;
-    column-gap: 2vw;
+    column-gap: var(--gutter);
+    row-gap: var(--gutter);
+
+    @media (max-height: 900px) {
+      grid-template-columns: 1fr;
+    }
 	}
 
   h2, ul {
     font-size: 2rem;
     line-height: 1.222;
+
+    @media (max-height: 900px) {
+      font-size: 1.33rem;
+    }
   }
 
   ul {
@@ -37,8 +46,8 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2vw;
-    row-gap: 2vw;
+    column-gap: var(--gutter);
+    row-gap: var(--gutter);
 
     span {
       opacity: 0.3;

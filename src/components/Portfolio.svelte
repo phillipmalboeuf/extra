@@ -34,6 +34,10 @@
     font-size: 2rem;
     font-weight: normal;
     margin: 0;
+
+    @media (max-height: 900px) {
+      font-size: 1rem;
+    }
   }
 
   p {
@@ -46,14 +50,19 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2vw;
+    column-gap: var(--gutter);
+    row-gap: 3rem;
+
+    @media (max-height: 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 
     li figure {
       margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 2vw;
+      column-gap: var(--gutter);
 
       &.horizontal {
         grid-template-columns: 1fr 2fr;

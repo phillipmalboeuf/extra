@@ -78,6 +78,10 @@
 		a,
 		span {
 			font-size: 2rem;
+
+			@media (max-height: 900px) {
+				font-size: 1rem;
+			}
 		}
 
 		span {

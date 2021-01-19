@@ -67,8 +67,13 @@
 
 
 <style lang="scss">
-  $gutter: 2vw;
-  $height: 6.66rem;
+  :root {
+    --height: 6.66rem;
+
+    @media (max-height: 900px) {
+      --height: 4.2rem;
+    }
+  }
   
   header {
     position: -webkit-sticky;
@@ -87,11 +92,9 @@
   footer {
     width: 100%;
     background: var(--highlight);
-    padding-bottom: $height;
-    padding-left: calc(2vw + 9.66rem);
-    margin-bottom: -$height;
-    // transition: transform 666ms;
-    // transform: translateY(0);
+    padding-bottom: var(--height);
+    padding-left: calc(var(--gutter) + 9.66rem);
+    margin-bottom: calc(var(--height) * -1);
 
     &.visible {
       position: fixed;
@@ -103,10 +106,18 @@
       display: block;
       padding: 0.33rem;
     }
+
+    @media (max-height: 900px) {
+      padding-left: calc(var(--gutter) + 5rem);
+    }
   }
 
   nav {
-    padding: 2rem $gutter;
+    padding: 2rem var(--gutter);
+
+    @media (max-height: 900px) {
+      padding: 1.5rem var(--gutter);
+    }
 
     a, p {
       font-size: 2rem;
@@ -122,12 +133,21 @@
       display: inline-block;
       transform: rotate(-12deg);
       transform-origin: bottom left;
+
+      @media (max-height: 900px) {
+        font-size: 2rem;
+      }
     }
 
     p {
       display: inline-block;
-      margin-left: $gutter*2;
+      margin-left: calc(var(--gutter) * 2);
       margin-bottom: 0;
+
+      @media (max-height: 900px) {
+        font-size: 1rem;
+        margin-left: var(--gutter);
+      }
     }
   }
 

@@ -37,11 +37,16 @@
     --medium: 1024px;
     --small: 375px;
 
+    --gutter: 2vw;
     --top: 0px;
 
     --textcolor: black;
     --highlight: var(--yellow);
     --background: white;
+
+    @media (max-height: 900px) {
+      --gutter: 4vw;
+    }
 	}
 
   :global(html) {
@@ -60,11 +65,21 @@
 
 	main {
     min-height: 120vh;
-    background: var(--background);
-    padding: 2vw;
     margin-top: var(--top);
-		/* margin: 0 auto; */
-    /* max-width: var(--large); */
+    padding: var(--gutter);
+    background: var(--background);
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: var(--top);
+      width: 100vw;
+      z-index: -1;
+      background: var(--background);
+    }
 	}
 
   :global(h1, h2, h3) {

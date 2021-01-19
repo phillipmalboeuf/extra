@@ -10,9 +10,9 @@
 
 <style lang="scss">
   figure {
-    margin: calc(-100vh - 2vw) 0 0 -2vw;
+    margin: calc(-100vh - var(--gutter)) 0 var(--gutter) calc(var(--gutter) * -1);
     width: 100vw;
-    min-height: 100vh;
+    // min-height: 100vh;
     background-color: white;
   }
 </style>

@@ -6,7 +6,7 @@
 </script>
 
 
-<figure class={text.fields.alignment || text.alignment}>
+<figure class={text.fields.alignment || text.alignment} class:media={text.media}>
   {#if text.media}
 	<Picture media={text.media} />
   {/if}
@@ -48,21 +48,40 @@
 		margin: 6rem 0;
 		display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2vw;
+    column-gap: var(--gutter);
 
-    &.Full {
-      grid-template-columns: 1fr 3fr;
-    }
+		&.Full {
+			grid-template-columns: 1fr 3fr;
+		}
 
-    &.Droite {
-      :global(picture) {
-        grid-column-start: 2;
-      }
+		&.Droite {
+			:global(picture) {
+				grid-column-start: 2;
+			}
 
-      figcaption {
-        grid-column-start: 3;
-      }
-    }
+			figcaption {
+				grid-column-start: 3;
+			}
+		}
+
+		@media (max-height: 900px) {
+			grid-template-columns: 1fr 1fr;
+
+			&.Droite {
+				:global(picture) {
+					grid-column-start: 2;
+				}
+
+				figcaption {
+					grid-row-start: 1;
+					grid-column-start: 1;
+				}
+			}
+
+			&:not(.media) {
+				grid-template-columns: 1fr;
+			}
+		}
 	}
 
 	small {

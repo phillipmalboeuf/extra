@@ -34,11 +34,19 @@
     &.described {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      column-gap: 2vw;
+      column-gap: var(--gutter);
     }
 
     &.described {
       grid-template-columns: 1fr 1fr 1fr;
+
+      @media (max-height: 900px) {
+        grid-template-columns: 1fr 1fr;
+
+        > div {
+          display: none;
+        }
+      }
     }
   }
 </style>

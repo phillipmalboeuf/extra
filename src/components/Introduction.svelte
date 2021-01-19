@@ -11,12 +11,17 @@
 		position: relative;
 		font-weight: 400;
 		font-style: italic;
-		font-size: 42px;
+		font-size: 2.5rem;
 		line-height: 1.33;
 		margin-bottom: 6rem;
 		transform: rotate(-12deg);
 		transform-origin: top left;
 		hyphens: auto;
+
+		@media (max-height: 900px) {
+			font-size: 1.5rem;
+			transform: none;
+		}
 	}
 
 	div {
