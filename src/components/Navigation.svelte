@@ -49,7 +49,7 @@
       Architecture<br/>& Design
     </p>
   </nav>
-  {#if scrolled}
+  {#if scrolled && !visible}
   <button on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
     <svg viewBox="0 0 65.14 49.16"><rect x="20.32" y="14.93" width="24.49" height="2.79"/><polygon points="32.57,17.72 20.32,26.98 20.32,30.57 26.15,26.19 31.03,22.33 31.03,34.23 34.12,34.23 34.12,22.36 38.99,26.19 44.82,30.57 44.82,26.98 	"/></svg>
   </button>
