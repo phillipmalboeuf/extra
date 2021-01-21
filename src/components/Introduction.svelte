@@ -18,7 +18,7 @@
 		transform-origin: top left;
 		hyphens: auto;
 
-		@media (max-height: 900px) {
+		@media (max-width: 900px) {
 			font-size: 1.5rem;
 			transform: none;
 		}

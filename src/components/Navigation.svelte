@@ -70,7 +70,7 @@
   :root {
     --height: 6.66rem;
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       --height: 4.2rem;
     }
   }
@@ -107,7 +107,7 @@
       padding: 0.33rem;
     }
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       padding-left: calc(var(--gutter) + 5rem);
     }
   }
@@ -115,7 +115,7 @@
   nav {
     padding: 2rem var(--gutter);
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       padding: 1.5rem var(--gutter);
     }
 
@@ -134,7 +134,7 @@
       transform: rotate(-12deg);
       transform-origin: bottom left;
 
-      @media (max-height: 900px) {
+      @media (max-width: 900px) {
         font-size: 2rem;
       }
     }
@@ -144,7 +144,7 @@
       margin-left: calc(var(--gutter) * 2);
       margin-bottom: 0;
 
-      @media (max-height: 900px) {
+      @media (max-width: 900px) {
         font-size: 1rem;
         margin-left: var(--gutter);
       }

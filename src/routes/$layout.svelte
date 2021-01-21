@@ -45,7 +45,7 @@
     --highlight: var(--yellow);
     --background: white;
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       --gutter: 4vw;
     }
 	}

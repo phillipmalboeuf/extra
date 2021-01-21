@@ -57,7 +57,7 @@
     column-gap: var(--gutter);
     row-gap: var(--gutter);
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       grid-template-columns: 1fr;
     }
 	}
@@ -82,7 +82,7 @@
       opacity: 0.3;
       text-transform: none;
 
-      @media (max-height: 900px) {
+      @media (max-width: 900px) {
         font-size: 1.333rem;
       }
     }

@@ -79,7 +79,7 @@
 		span {
 			font-size: 2rem;
 
-			@media (max-height: 900px) {
+			@media (max-width: 900px) {
 				font-size: 1rem;
 			}
 		}

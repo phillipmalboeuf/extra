@@ -26,7 +26,7 @@
     column-gap: var(--gutter);
     row-gap: var(--gutter);
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       grid-template-columns: 1fr;
     }
 	}
@@ -35,7 +35,7 @@
     font-size: 2rem;
     line-height: 1.222;
 
-    @media (max-height: 900px) {
+    @media (max-width: 900px) {
       font-size: 1.33rem;
     }
   }
