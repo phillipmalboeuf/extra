@@ -30,6 +30,7 @@
 
 	:global(:root) {
 		font-family: "Helvetica Now", "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: -0.04em;
 
     --yellow: yellow;
 
@@ -101,14 +102,12 @@
   :global(h5) {
     font-size: 2rem;
     font-weight: normal;
-    letter-spacing: 0.03em;
     line-height: 1.222;
   }
 
   :global(h6) {
     font-size: 1rem;
     font-weight: normal;
-    letter-spacing: 0.05em;
     line-height: 1.6;
   }
 
@@ -145,7 +144,6 @@
 
   :global(h6) {
     font-size: 12px;
-    letter-spacing: 0.05em;
     line-height: 1.6;
   }
 
