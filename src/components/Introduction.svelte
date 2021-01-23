@@ -3,8 +3,10 @@
   export let intro
 </script>
 
-<div></div>
-<p>{intro}</p>
+<article>
+	<div></div>
+	<p>{intro}</p>
+</article>
 
 <style lang="scss">
 	p {
@@ -31,5 +33,9 @@
 		height: 20vw;
 		transform: rotate(-12deg);
 		transform-origin: top left;
+	}
+
+	article {
+		overflow: hidden;
 	}
 </style>

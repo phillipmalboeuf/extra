@@ -68,10 +68,10 @@
 
 <style lang="scss">
   :root {
-    --height: 6.66rem;
+    --height: 8.88rem;
 
     @media (max-width: 900px) {
-      --height: 4.2rem;
+      --height: 6.66rem;
     }
   }
   

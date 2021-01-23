@@ -61,26 +61,13 @@
     padding: 0;
     margin: 0;
     min-height: 120vh;
-    background: var(--highlight);
+    background: var(--background);
   }
 
 	main {
     min-height: 120vh;
     margin-top: var(--top);
     padding: var(--gutter);
-    background: var(--background);
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: var(--top);
-      width: 100vw;
-      z-index: -1;
-      background: var(--background);
-    }
 	}
 
   :global(h1, h2, h3) {
