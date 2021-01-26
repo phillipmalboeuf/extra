@@ -58,14 +58,15 @@
   </nav>
   {#if scrolled && !visible}
   <button on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-    <svg viewBox="0 0 65.14 49.16"><rect x="20.32" y="14.93" width="24.49" height="2.79"/><polygon points="32.57,17.72 20.32,26.98 20.32,30.57 26.15,26.19 31.03,22.33 31.03,34.23 34.12,34.23 34.12,22.36 38.99,26.19 44.82,30.57 44.82,26.98 	"/></svg>
+    <svg viewBox="0 0 65.14 49.16"><rect x="22.72" y="15.35" width="19.69" height="2.79"/><polygon points="42.22,28.69 32.57,19.04 22.92,28.69 24.9,30.66 31.02,24.53 31.02,34.65 34.12,34.65 34.12,24.53 
+	40.24,30.66 "/></svg>
   </button>
   {:else}
   <button on:click={() => visible = !visible}>
     {#if visible}
-    <svg viewBox="0 0 65.14 49.16"><polygon points="44.82,13.54 32.6,22.77 20.32,13.54 20.32,17.13 30.18,24.58 20.32,32.02 20.32,35.62 32.6,26.39 44.82,35.62 44.82,32.02 34.97,24.58 44.82,17.13 "/></svg>
+    <svg viewBox="0 0 65.14 49.16"><rect x="20.32" y="23.19" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -7.8412 30.2298)" class="st0" width="24.49" height="2.79"/><rect x="31.18" y="12.33" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -7.8412 30.2298)" class="st0" width="2.79" height="24.49"/></svg>
     {:else}
-    <svg viewBox="0 0 65.14 49.16"><rect x="20.32" y="16.06" width="24.49" height="2.79"/><rect x="20.32" y="30.31" width="24.49" height="2.79"/></svg>
+    <svg viewBox="0 0 65.14 49.16"><rect x="22.96" y="15.98" width="19.69" height="2.79"/><rect x="22.96" y="30.24" width="19.69" height="2.79"/></svg>
     {/if}
   </button>
   {/if}
