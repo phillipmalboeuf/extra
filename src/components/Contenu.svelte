@@ -7,13 +7,13 @@
   import Equipe from '$components/Equipe.svelte'
 
   export let page
-  const contenu = page.item.fields.contenu.map(entry => {
+  const contenu = page.item.fields.contenu ? page.item.fields.contenu.map(entry => {
     const e = findEntry(page, entry.sys.id)
     return {
       ...e,
       media: e.fields.media && findAsset(page, e.fields.media.sys.id)
     }
-  })
+  }) : []
 </script>
 
 
