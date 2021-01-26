@@ -4,10 +4,11 @@
   import Hero from '$components/Hero.svelte'
 
   export let page
+  export let padded
   const hero = page.item.fields.hero && findAsset(page, page.item.fields.hero.sys.id)
 </script>
 
-<Hero {hero} />
+<Hero {hero} {padded} />
 
 <Contenu page={page} />
 

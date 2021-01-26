@@ -14,5 +14,5 @@
 </script>
 
 <section>
-	<Page {page} />
+	<Page {page} padded={false} />
 </section>

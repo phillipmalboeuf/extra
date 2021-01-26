@@ -1,11 +1,12 @@
 <script>
   import Picture from '$components/Picture.svelte'
   export let hero
+  export let padded = true
 </script>
 
 {#if hero}
 <style>:root { --top: 100vh; }</style>
-<figure><Picture media={hero} /></figure>
+<figure class:padded><Picture media={hero} /></figure>
 {/if}
 
 <style lang="scss">
@@ -14,5 +15,9 @@
     width: 100vw;
     // min-height: 100vh;
     background-color: white;
+
+    &.padded {
+      padding: var(--gutter);
+    }
   }
 </style>
