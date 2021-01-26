@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ page }) {
-		return { props: { locale: page.query.get('locale') } }
+		return { props: { locale: page.query.get('locale'), path: page.path } }
 	}
 </script>
 
@@ -9,6 +9,7 @@
   import Navigation from '$components/Navigation.svelte'
 
   export let locale
+  export let path
   setContext('locale', locale)
 </script>
 
@@ -21,7 +22,7 @@
   <slot></slot>
 </main>
 
-<Navigation />
+<Navigation {path} />
 
 <style lang="scss">
   :global(*) {

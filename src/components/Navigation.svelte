@@ -1,6 +1,8 @@
 <script>
   import { onMount, getContext } from 'svelte'
   import { fade, fly } from 'svelte/transition'
+
+  export let path
   
   let visible = false
   let scrolled
@@ -16,24 +18,29 @@
 
 		scrolledObserver.observe(footer)
 	})
+
+  function click(e) {
+    visible = false
+    path = e.currentTarget.href
+  }
 </script>
 
 <div bind:this={footer}>
 {#if visible}
 <footer class="visible" transition:fly={{ y: 100 }}>
   <nav>
-    <a href="/projets{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
-    <a href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'About us' : 'À propos'}</a>
-    <a href="/contact{locale ? `?locale=${locale}` : ''}" on:click={() => visible = false}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a class:active={path.includes('/projets')} href="/projets{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a class:active={path.includes('/a-propos')} href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a class:active={path.includes('/contact')} href="/contact{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
     <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
 {:else}
 <footer>
   <nav>
-    <a href="/projets{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'Projects' : 'Projets'}</a>
-    <a href="/a-propos{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'About us' : 'À propos'}</a>
-    <a href="/contact{locale ? `?locale=${locale}` : ''}">{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a class:active={path.includes('/projets')} href="/projets{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a class:active={path.includes('/a-propos')} href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a class:active={path.includes('/contact')} href="/contact{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
     <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
@@ -122,6 +129,10 @@
     a, p {
       font-size: 2rem;
       line-height: 1;
+    }
+
+    a.active {
+      opacity: 0.3;
     }
 
     a[href="/"] {
