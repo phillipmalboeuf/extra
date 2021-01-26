@@ -18,7 +18,7 @@
           <h5>{project.fields.titre}</h5>
           <p>{project.fields.descripteur}</p>
       </figcaption>
-      <Picture media={project.thumbnail} small />
+      <Picture media={project.thumbnail} small ar={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height ? 0.6 : 1.666} />
     </figure>
     </a>
   </li>
