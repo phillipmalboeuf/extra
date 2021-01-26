@@ -100,7 +100,7 @@
 
   :global(p) {
     font-size: 1.25rem;
-    line-height: 1.222;
+    line-height: 1.333;
     white-space: pre-line;
   }
 
