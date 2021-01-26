@@ -13,7 +13,7 @@
 		position: relative;
 		font-weight: 400;
 		font-style: italic;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		line-height: 1.33;
 		margin-bottom: 6rem;
 		transform: rotate(-12deg);
