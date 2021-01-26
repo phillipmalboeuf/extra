@@ -21,26 +21,26 @@
     <li>
       {#if field === 'adresse'}
       <a href="https://www.google.com/maps/place/{value}" target="_blank">
-        {field}<br />
+        <strong>{field}</strong><br />
         <span>{value}</span>
       </a>
       {:else if field === 'phone'}
       <a href="tel:{value}" target="_blank">
-        Téléphone<br />
+        <strong>Téléphone</strong><br />
         <span>{value}</span>
       </a>
       {:else if field === 'courriel' || field === 'emploi'}
       <a href="mailto:{value}" target="_blank">
-        {field}<br />
+        <strong>{field}</strong><br />
         <span>{value}</span>
       </a>
       {:else if field === 'suivre'}
       <a href="https://instagram.com/{value}" target="_blank">
-        Nous suivre<br />
+        <strong>Nous suivre</strong><br />
         <span>@{value}</span>
       </a>
       {:else}
-      {field}<br />
+      <strong>{field}</strong><br />
       <span>{value}</span>
       {/if}
     </li>
@@ -51,7 +51,7 @@
 
 <style lang="scss">
 	section {
-		margin: 6rem 0;
+		margin: 0 0 6rem;
 		display: grid;
     grid-template-columns: 1fr 5fr;
     column-gap: var(--gutter);
@@ -85,6 +85,19 @@
       @media (max-width: 900px) {
         font-size: 1.333rem;
       }
+    }
+
+    strong {
+      font-weight: normal;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    opacity: 1;
+
+    strong {
+      opacity: 0.3;
     }
   }
 </style>

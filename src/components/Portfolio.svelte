@@ -12,17 +12,15 @@
 <ol>
 {#each items as project}
   <li>
+    <a href="/projets/{project.fields.id}">
     <figure class:horizontal={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height}>
       <figcaption>
-        <a href="/projets/{project.fields.id}">
           <h5>{project.fields.titre}</h5>
           <p>{project.fields.descripteur}</p>
-        </a>
       </figcaption>
-      <a href="/projets/{project.fields.id}">
-        <Picture media={project.thumbnail} small />
-      </a>
+      <Picture media={project.thumbnail} small />
     </figure>
+    </a>
   </li>
 {/each}
 </ol>
@@ -68,4 +66,15 @@
         grid-template-columns: 1fr 2fr;
       }
     }
+
+  a:hover,
+  a:focus {
+    h5 {
+      opacity: 0.3;
+    }
+
+    :global(img) {
+      opacity: 0.88;
+    }
+  }
 </style>
