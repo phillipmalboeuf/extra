@@ -17,7 +17,7 @@
 </script>
 
 
-{#each contenu as entry}
+{#each contenu as entry (entry.sys.id)}
 {#if entry.sys.contentType.sys.id === 'introduction'}
 <Introduction intro={entry.fields.text} />
 {:else if entry.sys.contentType.sys.id === 'portfolio'}
