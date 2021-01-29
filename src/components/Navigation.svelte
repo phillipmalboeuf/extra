@@ -49,7 +49,7 @@
 
 <header>
   <nav>
-    <a href="/" on:click={click}>
+    <a class="logo" href="/{locale ? `?locale=${locale}` : ''}" on:click={click}>
       Extra
     </a>
     <p>
@@ -138,7 +138,7 @@
       opacity: 0.3;
     }
 
-    a[href="/"] {
+    a.logo {
       font-size: 3rem;
       line-height: 1;
       font-style: italic;

@@ -69,12 +69,9 @@
 
   a:hover,
   a:focus {
-    h5 {
-      opacity: 0.3;
-    }
-
+    p,
     :global(img) {
-      opacity: 0.88;
+      opacity: 1;
     }
   }
 </style>

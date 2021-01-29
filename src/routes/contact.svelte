@@ -29,6 +29,7 @@
 
   <ul>
     {#each fields as [field, value]}
+    {#if value}
     <li>
       {#if field === 'adresse'}
       <a href="https://www.google.com/maps/place/{value}" target="_blank">
@@ -42,7 +43,7 @@
       </a>
       {:else if field === 'courriel' || field === 'emploi'}
       <a href="mailto:{value}" target="_blank">
-        <strong>{field}</strong><br />
+        <strong>Courriel / Emploi</strong><br />
         <span>{value}</span>
       </a>
       {:else if field === 'suivre'}
@@ -55,6 +56,7 @@
       <span>{value}</span>
       {/if}
     </li>
+    {/if}
     {/each}
   </ul>
 </section>
@@ -135,8 +137,8 @@
   a:focus {
     opacity: 1;
 
-    strong {
-      opacity: 0.3;
+    span {
+      opacity: 1;
     }
   }
 </style>
