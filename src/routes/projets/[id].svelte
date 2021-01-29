@@ -49,10 +49,12 @@
 	details
 }} />
 
+{#key project.sys.id}
 <Contenu page={{
 	item: project,
 	includes
 }} />
+{/key}
 
 <nav>
 	{#if project.previous}
