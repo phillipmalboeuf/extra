@@ -11,7 +11,7 @@
 
 <style lang="scss">
   figure {
-    margin: calc(-100vh - var(--gutter)) 0 var(--gutter) calc(var(--gutter) * -1);
+    margin: calc(-100vh - var(--gutter)) 0 calc(var(--gutter) + 6rem) calc(var(--gutter) * -1);
     width: 100vw;
     // min-height: 100vh;
     background-color: white;

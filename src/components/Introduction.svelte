@@ -11,6 +11,7 @@
 <style lang="scss">
 	p {
 		position: relative;
+		width: 90%;
 		font-weight: 400;
 		font-style: italic;
 		font-size: 3rem;

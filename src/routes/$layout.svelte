@@ -113,51 +113,9 @@
   }
 
   @media (max-width: 1200px) {
-  :global(h1) {
-    font-size: 120px;
-  }
-
-  :global(h2) {
-    font-size: 75px;
-  }
-
-  :global(h3) {
-    font-size: 56px;
-  }
-
-  /* :global(h5) {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-
-  :global(h6) {
-    font-size: 12px;
-    line-height: 1.6;
-  }
-
-  :global(p) {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  :global(small) {
-    font-size: 12px;
-    line-height: 1.6;
-  } */
   }
 
   @media (max-width: 900px) {
-  :global(h1) {
-    font-size: 60px;
-  }
-
-  :global(h2) {
-    font-size: 50px;
-  }
-
-  :global(h3) {
-    font-size: 50px;
-  }
   }
 
   :global(a) {
