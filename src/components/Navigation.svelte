@@ -49,7 +49,7 @@
 
 <header>
   <nav>
-    <a href="/">
+    <a href="/" on:click={click}>
       Extra
     </a>
     <p>
@@ -91,9 +91,11 @@
     
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
     button {
       background: none;
+      padding: 1rem 0;
     }
   }
 
