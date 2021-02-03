@@ -10,7 +10,7 @@ export const entries = async (fetch, type, order='-sys.createdAt', locale='fr-CA
 }
 
 export const entry = async (fetch, type, id, locale='fr-CA') => {
-  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&sys.id=${id}&locale=${locale}&include=3`)
+  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&sys.id=${id}&locale=${locale}&include=2`)
   const json = await response.json()
   return {
     ...json,
