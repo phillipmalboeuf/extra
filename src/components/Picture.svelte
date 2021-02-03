@@ -17,13 +17,13 @@
 {:else}
 <picture>
   {#if small}
-  <source srcSet="{media.fields.file.url}?w=400{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 400}&fit=fill` : ''}" media="(max-width: 900px)" />
-  <source srcSet="{media.fields.file.url}?w=600{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 600}&fit=fill` : ''}" media="(max-width: 1200px)" />
-  <img src="{media.fields.file.url}?w=800{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 800}&fit=fill` : ''}" alt="{media.fields.title} {media.fields.description}" />
+  <source srcSet="{media.fields.file.url}?w=400{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 400)}&fit=fill` : ''}" media="(max-width: 900px)" />
+  <source srcSet="{media.fields.file.url}?w=600{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 600)}&fit=fill` : ''}" media="(max-width: 1200px)" />
+  <img src="{media.fields.file.url}?w=800{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 800)}&fit=fill` : ''}" alt="{media.fields.title} {media.fields.description}" />
   {:else}
-  <source srcSet="{media.fields.file.url}?w=900{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 900}&fit=fill` : ''}" media="(max-width: 900px)" />
-  <source srcSet="{media.fields.file.url}?w=1200{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 1200}&fit=fill` : ''}" media="(max-width: 1200px)" />
-  <img src="{media.fields.file.url}?w=1800{webp ? '&fm=webp' : ''}{ar ? `&h=${ar * 1800}&fit=fill` : ''}" alt="{media.fields.title} {media.fields.description}" />
+  <source srcSet="{media.fields.file.url}?w=900{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 900)}&fit=fill` : ''}" media="(max-width: 900px)" />
+  <source srcSet="{media.fields.file.url}?w=1200{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 1200)}&fit=fill` : ''}" media="(max-width: 1200px)" />
+  <img src="{media.fields.file.url}?w=1800{webp ? '&fm=webp' : ''}{ar ? `&h=${parseInt(ar * 1800)}&fit=fill` : ''}" alt="{media.fields.title} {media.fields.description}" />
   {/if}
 </picture>
 {/if}
