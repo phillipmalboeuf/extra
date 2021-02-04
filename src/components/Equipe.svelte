@@ -22,7 +22,7 @@
 	section {
 		margin: 6rem 0;
 		display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 8fr;
     column-gap: var(--gutter);
     row-gap: var(--gutter);
 
