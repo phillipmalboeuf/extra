@@ -18,7 +18,7 @@
 	<title>Extra</title>
 </svelte:head>
 
-<main>
+<main id="main">
   <slot></slot>
 </main>
 

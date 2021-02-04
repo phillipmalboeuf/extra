@@ -17,6 +17,8 @@
 		)
 
 		scrolledObserver.observe(footer)
+
+    document.getElementById('main').addEventListener('click', () => visible = false, { passive: true, capture: false })
 	})
 
   function click(e) {
