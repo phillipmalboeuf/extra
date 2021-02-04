@@ -6,20 +6,26 @@
   const items = projects.items.map(item => ({
     ...item,
     thumbnail: findAsset(projects, item.fields.thumbnail.sys.id)
+  })).map(item => ({
+    ...item,
+    horizontal: item.thumbnail.fields.file.details.image.width > item.thumbnail.fields.file.details.image.height
   }))
+  
+  const horizontals = items.filter(item => item.horizontal).reduce((hs, item, index) => ({ ...hs, [item.sys.id]: index % 2 }), {})
+  const verticals = items.filter(item => !item.horizontal).reduce((hs, item, index) => ({ ...hs, [item.sys.id]: index % 2 }), {})
 </script>
 
 <ol>
 {#each items as project}
   <li>
     <a href="/projets/{project.fields.id}">
-    <figure class:horizontal={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height}>
+    <figure class:horizontal={project.horizontal} class:left={project.horizontal ? !!horizontals[project.sys.id] : !verticals[project.sys.id]}>
       <figcaption>
         <h5>{project.fields.titre}</h5>
         <p>{project.fields.descripteur}</p>
       </figcaption>
       
-      <Picture media={project.thumbnail} small ar={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height ? 0.6 : 1.666} />
+      <Picture media={project.thumbnail} small ar={project.horizontal ? 0.6 : 1.666} />
     </figure>
     </a>
   </li>
@@ -63,11 +69,31 @@
       margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      // grid-template-rows: 66vh;
+      grid-template-rows: 37.5vw;
       column-gap: var(--gutter);
+
+      @media (max-width: 900px) {
+        grid-template-rows: auto;
+      }
 
       &.horizontal {
         grid-template-columns: 1fr 3fr;
+      }
+
+      &.left {
+
+        &.horizontal {
+          grid-template-columns: 3fr 1fr;
+        }
+
+        figcaption {
+					grid-column-start: 2;
+				}
+
+        :global(picture) {
+          grid-row-start: 1;
+          grid-column-start: 1;
+        }
       }
     }
 
