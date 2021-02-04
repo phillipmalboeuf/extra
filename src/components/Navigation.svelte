@@ -130,7 +130,7 @@
     }
 
     a, p {
-      font-size: 2rem;
+      font-size: 1.75rem;
       line-height: 1;
     }
 
@@ -149,7 +149,7 @@
       transform-origin: bottom left;
 
       @media (max-width: 900px) {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
     }
 

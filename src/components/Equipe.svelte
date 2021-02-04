@@ -32,7 +32,7 @@
 	}
 
   h2, ul {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.222;
 
     @media (max-width: 900px) {

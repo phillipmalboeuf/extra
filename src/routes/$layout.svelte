@@ -79,7 +79,7 @@
   }
 
   :global(h1, h2, h3) {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: normal;
   }
 
@@ -88,7 +88,7 @@
   }
 
   :global(h5) {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: normal;
     line-height: 1.222;
   }
@@ -119,6 +119,7 @@
   }
 
   :global(a) {
+    cursor: pointer;
     outline: none;
     color: currentColor;
     text-decoration: none;

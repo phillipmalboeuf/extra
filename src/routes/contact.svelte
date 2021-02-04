@@ -104,7 +104,7 @@
   }
 
   h1, ul {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.222;
   }
 

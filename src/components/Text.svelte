@@ -36,7 +36,7 @@
 
 <style lang="scss">
   h1 {
-		font-size: 2rem;
+		font-size: 1.75rem;
 		margin-bottom: 0;
 	}
 
