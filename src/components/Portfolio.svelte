@@ -12,17 +12,16 @@
 <ol>
 {#each items as project}
   <li>
+    <a href="/projets/{project.fields.id}">
     <figure class:horizontal={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height}>
       <figcaption>
-        <a href="/projets/{project.fields.id}">
-          <h5>{project.fields.titre}</h5>
-          <p>{project.fields.descripteur}</p>
-        </a>
+        <h5>{project.fields.titre}</h5>
+        <p>{project.fields.descripteur}</p>
       </figcaption>
-      <a href="/projets/{project.fields.id}">
+      
       <Picture media={project.thumbnail} small ar={project.thumbnail.fields.file.details.image.width > project.thumbnail.fields.file.details.image.height ? 0.6 : 1.666} />
-      </a>
     </figure>
+    </a>
   </li>
 {/each}
 </ol>
@@ -72,10 +71,22 @@
       }
     }
 
+  a {
+    pointer-events: none;
+
+    figure, figcaption {
+      pointer-events: none;
+    }
+
+    h5,
+    p,
+    :global(img) {
+      pointer-events: auto;
+    }
+  }
+
   a:hover,
   a:focus {
-    opacity: 1;
-
     p,
     :global(img) {
       opacity: 1;
