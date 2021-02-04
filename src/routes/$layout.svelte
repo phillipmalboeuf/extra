@@ -31,7 +31,7 @@
 
 	:global(:root) {
 		font-family: "Helvetica Now", "Helvetica Neue", Helvetica, sans-serif;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.08em;
 
     --yellow: yellow;
 

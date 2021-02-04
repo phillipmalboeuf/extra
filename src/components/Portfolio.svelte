@@ -32,6 +32,7 @@
 <style lang="scss">
   h5, p {
     font-size: 1.75rem;
+    line-height: 1.222;
     font-weight: normal;
     margin: 0;
     hyphens: auto;
@@ -74,7 +75,7 @@
   a:hover,
   a:focus {
     opacity: 1;
-    
+
     p,
     :global(img) {
       opacity: 1;
