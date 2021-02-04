@@ -5,7 +5,8 @@
 
   export let page
   export let padded = undefined
-  const hero = page.item.fields.hero && findAsset(page, page.item.fields.hero.sys.id)
+  export let heroOverride = undefined
+  const hero = heroOverride || (page.item.fields.hero && findAsset(page, page.item.fields.hero.sys.id))
 </script>
 
 <Hero {hero} {padded} />

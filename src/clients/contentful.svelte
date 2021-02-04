@@ -18,6 +18,12 @@ export const entry = async (fetch, type, id, locale='fr-CA') => {
   }
 }
 
+export const asset = async (fetch, id) => {
+  const response = await fetch(`https://cdn.contentful.com/spaces/${contentful.space}/assets/${id}?access_token=${contentful.accessToken}`)
+  const json = await response.json()
+  return json
+}
+
 export function findEntry(content, id) {
   return content.includes.Entry.find(entry => entry.sys.id === id)
 }
