@@ -16,7 +16,7 @@
 		font-style: italic;
 		font-size: 3rem;
 		line-height: 1.33;
-		margin-bottom: 6rem;
+		margin-bottom: 10rem;
 		transform: rotate(-12deg);
 		transform-origin: top left;
 		hyphens: auto;
