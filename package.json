@@ -2,6 +2,9 @@
   "name": "extra",
   "description": "TODO",
   "version": "0.0.1",
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "dev": "sapper dev --open",
     "build": "sapper build --legacy",
