@@ -1,16 +1,16 @@
-<script context="module">
-	export async function load({ page }) {
-		return { props: { locale: page.query.get('locale'), path: page.path } }
-	}
-</script>
 
 <script>
   import { setContext } from 'svelte'
-  import Navigation from '$components/Navigation.svelte'
+  import { stores } from '@sapper/app'
+  import Navigation from '../components/Navigation.svelte'
 
-  export let locale
-  export let path
+  const { preloading, page, session } = stores()
+
+	export let segment
+
+  export let locale = undefined
   setContext('locale', locale)
+  setContext('segment', segment)
 </script>
 
 <svelte:head>
@@ -22,7 +22,7 @@
   <slot></slot>
 </main>
 
-<Navigation {path} />
+<Navigation path={$page.path} />
 
 <style lang="scss">
   :global(*) {

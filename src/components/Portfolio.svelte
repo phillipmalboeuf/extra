@@ -1,6 +1,6 @@
 <script>
-  import { findAsset, findEntry } from '$clients/contentful.svelte'
-  import Picture from '$components/Picture.svelte'
+  import { findAsset, findEntry } from '../clients/contentful.js'
+  import Picture from '../components/Picture.svelte'
 
 	export let projects
   const items = projects.items.map(item => ({

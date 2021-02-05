@@ -1,5 +1,5 @@
 <script>
-  import Picture from '$components/Picture.svelte'
+  import Picture from '../components/Picture.svelte'
   export let hero
   export let padded = true
 </script>

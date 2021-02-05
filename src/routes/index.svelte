@@ -1,23 +1,13 @@
 <script context="module">
-
-	import { entry, asset } from '$clients/contentful.svelte'
-
-	const heroes = [
-		'2jBoCTNlJn92VihclDOSlw',
-		'4as6R4rcnE5iLVTXsarPwV',
-		'4w9bzCRAGxu97BIhuwwnM4'
-	]
-
-	export async function load({ fetch }) {
-		const page = await entry(fetch, 'page', '2ZqXhnyr1p8XcClBDO3Lss')
-		const hero = await asset(fetch, heroes[parseInt(Math.floor(Math.random() * 3))])
-
-		return { props: { page, hero } }
+	export function preload() {
+		return this.fetch(`index.json`).then(r => r.json()).then(({ page, hero }) => {
+			return { page, hero }
+		})
 	}
 </script>
 
 <script>
-	import Page from '$components/Page.svelte'
+	import Page from '../components/Page.svelte'
 	export let page
 	export let hero
 </script>

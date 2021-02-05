@@ -1,10 +1,8 @@
 <script context="module">
-
-	import { entry } from '$clients/contentful.svelte'
-
-	export async function load({ fetch }) {
-		const contact = await entry(fetch, 'contact', '6xck0ECuEVYO6N1UAGCp5D')
-		return { props: { contact } }
+  export function preload() {
+		return this.fetch(`contact.json`).then(r => r.json()).then(({ contact }) => {
+			return { contact }
+		})
 	}
 </script>
 

@@ -1,6 +1,6 @@
 <script>
-  import Picture from '$components/Picture.svelte'
-  import Document from '$components/document/index.svelte'
+  import Picture from '../components/Picture.svelte'
+  import Document from '../components/document/index.svelte'
 
 	export let text
 </script>

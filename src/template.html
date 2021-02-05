@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="yellow">
 
-		<style>
+	%sapper.base%
+
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+
+	%sapper.scripts%
+
+	<style>
 		@font-face {
 			font-family: 'Helvetica Now';
 			src: url('/HelveticaNowText-Regular/font.woff2') format('woff2'),
@@ -24,9 +30,11 @@
 			font-display: swap;
 		}
 	</style>
-		%svelte.head%
-	</head>
-	<body>
-		<div id="svelte">%svelte.body%</div>
-	</body>
+
+	%sapper.styles%
+	%sapper.head%
+</head>
+<body>
+	<div id="sapper">%sapper.html%</div>
+</body>
 </html>

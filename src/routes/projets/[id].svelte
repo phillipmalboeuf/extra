@@ -1,37 +1,16 @@
 <script context="module">
-	import { entries, findAsset, findEntry } from '$clients/contentful.svelte'
-
-	export async function load({ page, fetch }) {
-		const projects = await entries(fetch, 'projet', '-fields.date')
-		let i
-
-		return {
-			props: {
-				project: projects.items.filter((item, index) => {
-					if (item.fields.id === page.params.id) {
-						i = index
-						return true
-					}
-					return false
-				})
-					.map(item => ({
-						...item,
-						thumbnail: findAsset(projects, item.fields.thumbnail.sys.id),
-						hero: item.fields.hero && findAsset(projects, item.fields.hero.sys.id),
-						next: i < projects.items.length && projects.items[i + 1],
-						previous: i > 0 && projects.items[i - 1]
-					}))[0],
-				includes: projects.includes
-			}
-		}
+	export function preload({ params }) {
+		return this.fetch(`projets/${params.id}.json`).then(r => r.json()).then(({ project, includes }) => {
+			return { project, includes }
+		})
 	}
 </script>
 
 <script>
-	import Hero from '$components/Hero.svelte'
-	import Introduction from '$components/Introduction.svelte'
-	import Text from '$components/Text.svelte'
-	import Contenu from '$components/Contenu.svelte'
+	import Hero from '../../components/Hero.svelte'
+	import Introduction from '../../components/Introduction.svelte'
+	import Text from '../../components/Text.svelte'
+	import Contenu from '../../components/Contenu.svelte'
 
 	export let project
 	export let includes

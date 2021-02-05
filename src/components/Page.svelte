@@ -1,7 +1,7 @@
 <script>
-  import { findAsset, findEntry } from '$clients/contentful.svelte'
-  import Contenu from '$components/Contenu.svelte'
-  import Hero from '$components/Hero.svelte'
+  import { findAsset, findEntry } from '../clients/contentful.js'
+  import Contenu from '../components/Contenu.svelte'
+  import Hero from '../components/Hero.svelte'
 
   export let page
   export let padded = undefined

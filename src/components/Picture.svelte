@@ -8,13 +8,15 @@
 <style>
   img,
   video {
+    width: 100%;
     max-width: 100%;
   }
 </style>
 
 {#if media.fields.file.contentType.startsWith('video/')}
 <video src="{media.fields.file.url}" autoplay muted loop={{
-  '4as6R4rcnE5iLVTXsarPwV': false
+  '4as6R4rcnE5iLVTXsarPwV': false,
+  '6TWihwMfZdHYG9j4vjrfvB': false
 }[media.sys.id] ?? true} playsinline></video>
 {:else}
 <picture>

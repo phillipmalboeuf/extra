@@ -1,10 +1,10 @@
 <script>
-  import { findAsset, findEntry } from '$clients/contentful.svelte'
-  import Introduction from '$components/Introduction.svelte'
-  import Portfolio from '$components/Portfolio.svelte'
-  import Photo from '$components/Photo.svelte'
-  import Text from '$components/Text.svelte'
-  import Equipe from '$components/Equipe.svelte'
+  import { findAsset, findEntry } from '../clients/contentful.js'
+  import Introduction from '../components/Introduction.svelte'
+  import Portfolio from '../components/Portfolio.svelte'
+  import Photo from '../components/Photo.svelte'
+  import Text from '../components/Text.svelte'
+  import Equipe from '../components/Equipe.svelte'
 
   export let page
   const contenu = page.item.fields.contenu ? page.item.fields.contenu.map(entry => {

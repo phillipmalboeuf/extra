@@ -1,7 +1,7 @@
 <script>
-  import Picture from '$components/Picture.svelte'
-  import Document from '$components/document/index.svelte'
-  import Introduction from '$components/Introduction.svelte'
+  import Picture from '../components/Picture.svelte'
+  import Document from '../components/document/index.svelte'
+  import Introduction from '../components/Introduction.svelte'
 
 	export let photo
 </script>

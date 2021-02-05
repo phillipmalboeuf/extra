@@ -1,16 +1,13 @@
 <script context="module">
-	import { entries } from '$clients/contentful.svelte'
-
-	export async function load({ page, fetch }) {
-		const locale = page.query.get('locale')
-		const projects = await entries(fetch, 'projet', '-fields.date', locale ? { 'en': 'en-CA' }[locale] : undefined)
-
-		return { props: { projects } }
+	export function preload() {
+		return this.fetch(`projets.json`).then(r => r.json()).then(({ projects }) => {
+			return { projects }
+		})
 	}
 </script>
 
 <script>
-  import Portfolio from '$components/Portfolio.svelte'
+  import Portfolio from '../../components/Portfolio.svelte'
 	export let projects
 </script>
 

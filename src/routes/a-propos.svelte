@@ -1,15 +1,13 @@
 <script context="module">
-
-	import { entry } from '$clients/contentful.svelte'
-
-	export async function load({ fetch }) {
-		const page = await entry(fetch, 'page', 'LmCTtqL9YXrY9sNtl6E4p')
-		return { props: { page } }
+	export function preload() {
+		return this.fetch(`a-propos.json`).then(r => r.json()).then(({ page }) => {
+			return { page }
+		})
 	}
 </script>
 
 <script>
-	import Page from '$components/Page.svelte'
+	import Page from '../components/Page.svelte'
 	export let page
 </script>
 
