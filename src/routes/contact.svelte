@@ -68,7 +68,7 @@
     z-index: 1;
 		margin: 0 0 6rem;
 		display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 6fr 1fr;
     column-gap: var(--gutter);
     row-gap: var(--gutter);
 
