@@ -13,7 +13,9 @@
 </style>
 
 {#if media.fields.file.contentType.startsWith('video/')}
-<video src="{media.fields.file.url}" autoplay muted loop playsinline></video>
+<video src="{media.fields.file.url}" autoplay muted loop={{
+  '4as6R4rcnE5iLVTXsarPwV': false
+}[media.sys.id] ?? true} playsinline></video>
 {:else}
 <picture>
   {#if small}
