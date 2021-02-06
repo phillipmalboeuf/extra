@@ -6,12 +6,13 @@ const heroes = [
   '4w9bzCRAGxu97BIhuwwnM4',
 	'1MSVmJUDJ1miEudr5njcld',
 	'6TWihwMfZdHYG9j4vjrfvB',
-	'2sixu7OIviJgql9I92czeu'
+	'2sixu7OIviJgql9I92czeu',
+	'3MrF7DrS3LJutQbcHRsfZH'
 ]
 
 export async function get(req, res) {
   const page = await entry('page', '2ZqXhnyr1p8XcClBDO3Lss')
-	const hero = await asset(heroes[parseInt(Math.floor(Math.random() * 6))])
+	const hero = await asset(heroes[parseInt(Math.floor(Math.random() * 7))])
 
 	res.writeHead(200, {
 		'Content-Type': 'application/json'
