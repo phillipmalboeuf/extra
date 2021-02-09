@@ -18,7 +18,7 @@
 <ol>
 {#each items as project}
   <li>
-    <a href="/projets/{project.fields.id}">
+    <a href="projets/{project.fields.id}">
     <figure class:horizontal={project.horizontal} class:left={project.horizontal ? !!horizontals[project.sys.id] : !verticals[project.sys.id]}>
       <figcaption>
         <h5>{project.fields.titre}</h5>

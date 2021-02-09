@@ -37,12 +37,12 @@
 
 <nav>
 	{#if project.previous}
-	<a href="/projets/{project.previous.fields.id}">← Projet précédent</a>
+	<a href="projets/{project.previous.fields.id}">← Projet précédent</a>
 	{:else}
 	<span>← Projet précédent</span>
 	{/if}
 	{#if project.next}
-	<a href="/projets/{project.next.fields.id}">Projet suivant →</a>
+	<a href="projets/{project.next.fields.id}">Projet suivant →</a>
 	{:else}
 	<span>Projet suivant →</span>
 	{/if}

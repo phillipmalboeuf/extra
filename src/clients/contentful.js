@@ -6,12 +6,12 @@ const contentful = {
 }
 
 export const entries = async (type, order='-sys.createdAt', locale='fr-CA') => {
-  const response = await axios.get(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&locale=${locale}&order=${order}&include=2`)
+  const response = await axios.get(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&locale=${{ 'fr': 'fr-CA', 'en': 'en-CA' }[locale] || locale}&order=${order}&include=2`)
   return response.data
 }
 
 export const entry = async (type, id, locale='fr-CA') => {
-  const response = await axios.get(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&sys.id=${id}&locale=${locale}&include=2`)
+  const response = await axios.get(`https://cdn.contentful.com/spaces/${contentful.space}/entries?access_token=${contentful.accessToken}&content_type=${type}&sys.id=${id}&locale=${{ 'fr': 'fr-CA', 'en': 'en-CA' }[locale] || locale}&include=2`)
   const json = response.data
   return {
     ...json,

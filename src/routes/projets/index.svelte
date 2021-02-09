@@ -14,7 +14,7 @@
 
 <nav>
   <h1>Projets</h1>
-  <!-- <a href="/projets">Tous les projets</a> -->
+  <!-- <a href="projets">Tous les projets</a> -->
 </nav>
 
 <Portfolio {projects} />

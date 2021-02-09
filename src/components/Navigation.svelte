@@ -31,19 +31,19 @@
 {#if visible}
 <footer class="visible" transition:fly={{ y: 100 }}>
   <nav>
-    <a class:active={path.includes('/projets')} href="/projets{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
-    <a class:active={path.includes('/a-propos')} href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
-    <a class:active={path.includes('/contact')} href="/contact{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
-    <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
+    <a class:active={path.includes('/projets')} href="projets" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a class:active={path.includes('/a-propos')} href="a-propos" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a class:active={path.includes('/contact')} href="contact" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a rel=external href={locale === 'en' ? '/' : '/en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
 {:else}
 <footer>
   <nav>
-    <a class:active={path.includes('/projets')} href="/projets{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
-    <a class:active={path.includes('/a-propos')} href="/a-propos{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
-    <a class:active={path.includes('/contact')} href="/contact{locale ? `?locale=${locale}` : ''}" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
-    <a rel=external href={locale === 'en' ? '?' : '?locale=en'}>{locale === 'en' ? 'Français' : 'English'}</a>
+    <a class:active={path.includes('/projets')} href="projets" on:click={click}>{locale === 'en' ? 'Projects' : 'Projets'}</a>
+    <a class:active={path.includes('/a-propos')} href="a-propos" on:click={click}>{locale === 'en' ? 'About us' : 'À propos'}</a>
+    <a class:active={path.includes('/contact')} href="contact" on:click={click}>{locale === 'en' ? 'Contact' : 'Contact'}</a>
+    <a rel=external href={locale === 'en' ? '/' : '/en'}>{locale === 'en' ? 'Français' : 'English'}</a>
   </nav>
 </footer>
 {/if}
@@ -51,7 +51,7 @@
 
 <header>
   <nav>
-    <a class="logo" href="/{locale ? `?locale=${locale}` : ''}" on:click={click}>
+    <a class="logo" href="/{locale ? `${locale}` : ''}" on:click={click}>
       Extra
     </a>
     <p>

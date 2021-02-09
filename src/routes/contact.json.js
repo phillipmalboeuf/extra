@@ -1,7 +1,7 @@
 import { entry, asset } from '../clients/contentful.js'
 
 export async function get(req, res) {
-  const contact = await entry('contact', '6xck0ECuEVYO6N1UAGCp5D')
+  const contact = await entry('contact', '6xck0ECuEVYO6N1UAGCp5D', req.locale)
 
 	res.writeHead(200, {
 		'Content-Type': 'application/json'

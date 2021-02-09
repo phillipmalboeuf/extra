@@ -8,13 +8,14 @@
 
 	export let segment
 
-  export let locale = undefined
+  let locale = $session.locale
   setContext('locale', locale)
   setContext('segment', segment)
 </script>
 
 <svelte:head>
   <html lang={locale || "fr"} />
+  <base href={locale ? `/${locale}` : '/'}>
 	<title>Extra</title>
 </svelte:head>
 
