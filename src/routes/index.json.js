@@ -6,8 +6,7 @@ const heroes = [
   '4w9bzCRAGxu97BIhuwwnM4',
 	'1MSVmJUDJ1miEudr5njcld',
 	'6TWihwMfZdHYG9j4vjrfvB',
-	'2sixu7OIviJgql9I92czeu',
-	'3MrF7DrS3LJutQbcHRsfZH'
+	'2sixu7OIviJgql9I92czeu'
 ]
 
 export async function get(req, res) {
