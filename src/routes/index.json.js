@@ -11,7 +11,7 @@ const heroes = [
 
 export async function get(req, res) {
   const page = await entry('page', '2ZqXhnyr1p8XcClBDO3Lss', req.locale)
-	const hero = await asset(heroes[parseInt(Math.floor(Math.random() * 7))])
+	const hero = await asset(heroes[parseInt(Math.floor(Math.random() * heroes.length))])
 
 	res.writeHead(200, {
 		'Content-Type': 'application/json'
