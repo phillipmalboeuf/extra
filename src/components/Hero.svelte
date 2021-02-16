@@ -2,11 +2,12 @@
   import Picture from '../components/Picture.svelte'
   export let hero
   export let padded = true
+  export let rotated = false
 </script>
 
 {#if hero}
 <style>:root { --top: 100vh; }</style>
-<figure class:padded><Picture media={hero} /></figure>
+<figure class:padded class:rotated><Picture media={hero} /></figure>
 {/if}
 
 <style lang="scss">
@@ -18,6 +19,15 @@
 
     &.padded {
       padding: var(--gutter);
+    }
+
+    &.rotated {
+      margin: calc(-100vh - var(--gutter)) 0 24rem;
+
+      transform: rotate(90deg) translateY(-100%);
+      transform-origin: top left;
+      width: 100vh;
+      height: calc(100vw - var(--gutter));
     }
   }
 </style>

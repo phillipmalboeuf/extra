@@ -9,7 +9,7 @@
   const hero = heroOverride || (page.item.fields.hero && findAsset(page, page.item.fields.hero.sys.id))
 </script>
 
-<Hero {hero} {padded} />
+<Hero {hero} {padded} rotated={heroOverride} />
 
 <Contenu page={page} />
 
