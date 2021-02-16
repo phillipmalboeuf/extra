@@ -5,7 +5,7 @@
 	export let projects
   const items = projects.items.map(item => ({
     ...item,
-    thumbnail: findAsset(projects, item.fields.thumbnail.sys.id)
+    thumbnail: findAsset(projects, (item.fields.imagePortfolio || item.fields.thumbnail).sys.id)
   })).map(item => ({
     ...item,
     horizontal: item.thumbnail.fields.file.details.image.width > item.thumbnail.fields.file.details.image.height
