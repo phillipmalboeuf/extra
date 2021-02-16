@@ -16,7 +16,7 @@
 		font-style: italic;
 		font-size: 3rem;
 		line-height: 1.33;
-		margin-bottom: 10rem;
+		margin: 16rem 0;
 		transform: rotate(-12deg);
 		transform-origin: top left;
 		hyphens: auto;
@@ -24,6 +24,7 @@
 		@media (max-width: 900px) {
 			font-size: 1.5rem;
 			transform: none;
+			margin: 4rem 0 10rem;
 		}
 	}
 

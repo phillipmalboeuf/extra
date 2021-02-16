@@ -28,7 +28,7 @@
 
 <style lang="scss">
   figure {
-    margin: 4rem 0;
+    margin: var(--gutter) 0;
 
     &.titled,
     &.described {

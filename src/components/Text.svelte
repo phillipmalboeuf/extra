@@ -45,7 +45,7 @@
 	}
 
 	figure {
-		margin: 6rem 0;
+		margin: var(--gutter) 0;
 		display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--gutter);
