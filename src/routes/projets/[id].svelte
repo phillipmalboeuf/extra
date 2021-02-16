@@ -17,7 +17,7 @@
 	const details = project.fields.details && Object.entries(project.fields.details)
 </script>
 
-
+{#key project.sys.id}
 <Hero hero={project.hero} />
 <Introduction intro={project.fields.introduction} />
 
@@ -28,7 +28,6 @@
 	details
 }} />
 
-{#key project.sys.id}
 <Contenu page={{
 	item: project,
 	includes
