@@ -22,12 +22,14 @@
     }
 
     &.rotated {
-      margin: calc(-100vh - var(--gutter)) 0 24rem;
+      @media (max-width: 900px) {
+        margin: calc(-100vh - var(--gutter)) 0 24rem;
 
-      transform: rotate(90deg) translateY(-100%);
-      transform-origin: top left;
-      width: 100vh;
-      height: calc(100vw - var(--gutter));
+        transform: rotate(90deg) translateY(-100%);
+        transform-origin: top left;
+        width: 100vh;
+        height: calc(100vw - var(--gutter));
+      }
     }
   }
 </style>
