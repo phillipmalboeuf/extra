@@ -36,14 +36,14 @@
 
 <nav>
 	{#if project.previous}
-	<a href="projets/{project.previous.fields.id}">← Projet précédent</a>
+	<a href="projets/{project.previous.fields.id}">← <span>Projet</span> précédent</a>
 	{:else}
-	<span>← Projet précédent</span>
+	<span>← <span>Projet</span> précédent</span>
 	{/if}
 	{#if project.next}
-	<a href="projets/{project.next.fields.id}">Projet suivant →</a>
+	<a href="projets/{project.next.fields.id}"><span>Projet</span> suivant →</a>
 	{:else}
-	<span>Projet suivant →</span>
+	<span><span>Projet</span> suivant →</span>
 	{/if}
 </nav>
 
@@ -53,18 +53,23 @@
 	nav {
 		display: flex;
 		justify-content: space-around;
-		padding: 4vw 4vw 6vw;
+		padding: 4vw 4vw 6rem;
 
 		a,
-		span {
+		> span {
 			font-size: 1.75rem;
 
 			@media (max-width: 900px) {
-				font-size: 1rem;
+				// font-size: 1rem;
+				text-transform: capitalize;
+
+				> span {
+					display: none;
+				}
 			}
 		}
 
-		span {
+		> span {
 			opacity: 0.3;
 		}
 	}

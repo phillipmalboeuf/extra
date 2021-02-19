@@ -111,6 +111,10 @@
     padding: 0;
     list-style: none;
 
+    @media (max-width: 900px) {
+      padding-left: calc(var(--gutter) * 7);
+    }
+
     li {
       margin-bottom: var(--gutter);
       text-transform: capitalize;
@@ -122,7 +126,8 @@
       text-transform: none;
 
       @media (max-width: 900px) {
-        font-size: 1.333rem;
+        font-size: 1rem;
+        display: block;
       }
     }
 

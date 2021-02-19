@@ -86,6 +86,7 @@
   }
   
   header {
+    z-index: 3;
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
@@ -109,6 +110,7 @@
   }
 
   footer {
+    z-index: 3;
     width: 100%;
     background: var(--highlight);
     padding-bottom: var(--height);
@@ -128,10 +130,6 @@
       &:last-child {
         margin-bottom: 10vh;
       }
-    }
-
-    @media (max-width: 900px) {
-      padding-left: calc(var(--gutter) + 5rem);
     }
   }
 
@@ -172,7 +170,7 @@
 
       @media (max-width: 900px) {
         font-size: 1rem;
-        margin-left: var(--gutter);
+        margin-left: calc(var(--gutter) * 1.75);
       }
     }
   }

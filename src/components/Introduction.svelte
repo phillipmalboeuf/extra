@@ -22,9 +22,11 @@
 		hyphens: auto;
 
 		@media (max-width: 900px) {
-			font-size: 1.5rem;
+			font-size: 1.75rem;
+			font-style: normal;
 			transform: none;
 			margin: 4rem 0 10rem;
+			width: 100%;
 		}
 	}
 

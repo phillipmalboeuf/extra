@@ -52,6 +52,10 @@
 
 		&.Full {
 			grid-template-columns: 1fr 2fr;
+
+			@media (max-width: 900px) {
+				grid-template-columns: 1fr 1fr;
+			}
 		}
 
 		&.Droite {
@@ -71,6 +75,16 @@
 		@media (max-width: 900px) {
 			grid-template-columns: 1fr 1fr;
 
+			h1,
+			h5 {
+				font-size: 1rem;
+			}
+
+			:global(p) {
+				font-size: 0.75rem;
+				letter-spacing: -0.02em;
+			}
+
 			&.Droite {
 				:global(picture) {
 					grid-column-start: 2;
@@ -89,6 +103,11 @@
 	}
 
 	small {
+
+		@media (max-width: 900px) {
+			font-size: 0.75rem;
+			letter-spacing: -0.02em;
+		}
 
 		span {
 			opacity: 0.3;

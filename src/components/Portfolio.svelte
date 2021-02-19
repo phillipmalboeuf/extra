@@ -63,6 +63,10 @@
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
     li figure {

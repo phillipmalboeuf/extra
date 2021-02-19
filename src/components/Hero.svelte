@@ -23,12 +23,26 @@
 
     &.rotated {
       @media (max-width: 900px) {
-        margin: calc(-100vh - var(--gutter)) 0 24rem;
+        margin: calc(-100vh - var(--gutter)) 0 24rem calc(var(--gutter) * -1);
 
         transform: rotate(90deg) translateY(-100%);
         transform-origin: top left;
-        width: 100vh;
-        height: calc(100vw - var(--gutter));
+        width: 170vw;
+        height: 100vw;
+
+        :global(video) {
+          // height: 100vw;
+          // object-fit: cover;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+    margin: calc(-100vh - var(--gutter)) 0 calc(var(--gutter) + 6rem) calc(var(--gutter) * -1);
+
+      :global(img) {
+        min-height: 50vh;
+        object-fit: cover;
       }
     }
   }

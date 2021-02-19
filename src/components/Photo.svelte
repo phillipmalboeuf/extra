@@ -38,9 +38,31 @@
       column-gap: var(--gutter);
     }
 
+    @media (max-width: 900px) {
+    &.titled:not(.vertical) {
+      grid-template-columns: 1fr;
+      
+      figcaption {
+        grid-row-start: 2;
+      }
+    }
+    }
+
     &.vertical {
       grid-template-columns: 1fr 1fr 1fr;
 
+      @media (max-width: 900px) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+      &:not(.described) {
+        figcaption {
+          align-self: flex-end;
+          text-align: right;
+        }
+      }
+
+      @media (min-width: 900px) {
       &:not(.described) {
         figcaption {
           grid-column-start: 2;
@@ -50,6 +72,7 @@
         :global(picture) {
           grid-column-start: 3;
         }
+      }
       }
     }
 
