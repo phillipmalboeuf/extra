@@ -41,7 +41,7 @@
     margin: calc(-100vh - var(--gutter)) 0 calc(var(--gutter) + 6rem) calc(var(--gutter) * -1);
 
       :global(img) {
-        min-height: 50vh;
+        min-height: 33vh;
         object-fit: cover;
       }
     }

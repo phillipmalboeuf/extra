@@ -27,6 +27,10 @@
 			transform: none;
 			margin: 4rem 0 10rem;
 			width: 100%;
+
+			article:first-of-type & {
+				margin-top: 0;
+			}
 		}
 	}
 
