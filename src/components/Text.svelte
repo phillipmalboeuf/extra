@@ -5,7 +5,7 @@
 	export let text
 </script>
 
-
+{#key text.sys.id}
 <figure class={text.fields.alignment || text.alignment} class:media={text.media}>
   {#if text.media}
 	<Picture media={text.media} />
@@ -32,6 +32,7 @@
     {/if}
 	</figcaption>
 </figure>
+{/key}
 
 
 <style lang="scss">

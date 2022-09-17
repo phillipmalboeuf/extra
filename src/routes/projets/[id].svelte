@@ -14,7 +14,6 @@
 
 	export let project
 	export let includes
-	const details = project.fields.details && Object.entries(project.fields.details)
 </script>
 
 {#key project.sys.id}
@@ -25,7 +24,7 @@
 	...project,
 	media: project.thumbnail,
 	alignment: 'Full',
-	details
+	details: project.fields.details && Object.entries(project.fields.details)
 }} />
 
 <Contenu page={{
